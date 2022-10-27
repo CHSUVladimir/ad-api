@@ -7,6 +7,15 @@
       "strict": true,
       "sourceMap": true
     },
-    "include": ["src"],
-    "exclude": ["node_modules", "**/__tests__/*"]
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules",
+      "node-scripts",
+      "**/src/*.spec.ts",
+      "**/src/*.stories.ts",
+      "**/src/*.test.ts",
+      "**/src/*_test.ts"
+    ]
   }

@@ -1,0 +1,59 @@
+{
+    "compilerOptions": {
+      "module": "esnext",
+      "moduleResolution": "node",
+      "outDir": "./dist/esm",
+      "target": "es2017",
+      "declaration": true,
+      "declarationDir": "./dist/typings",
+      "lib": [
+        "ES5",
+        "esnext.intl",
+        "esnext",
+        "es2018",
+        "dom"
+      ],
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": true,
+      "resolveJsonModule": false,
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "baseUrl": "./",
+      "downlevelIteration": true,
+      "importHelpers": false,
+      "typeRoots": [
+        "node_modules/@types"
+      ],
+      "noImplicitAny": false
+    },
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules",
+      "node-scripts",
+      "**/src/*.spec.ts",
+      "**/src/*.stories.ts",
+      "**/src/*.test.ts",
+      "**/src/*_test.ts"
+    ],
+    "typedocOptions": {
+      "exclude": [
+        "**/*@(.spec|.stories|.test|._test).ts",
+        "**/node_modules/**"
+      ],
+      "excludeExternals": true,
+      "excludeTags": [
+        "property",
+        "function",
+        "todo"
+      ],
+      "includes": "./md/prefixes",
+      "entryPoints": [
+        "./src/index.ts"
+      ],
+      "out": "./docs/api",
+      "readme": "./docs/README.md"
+    }
+  }

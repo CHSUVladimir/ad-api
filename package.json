@@ -1,17 +1,21 @@
 {
-  "name": "ad-api",
+  "name": "@CHSUVladimir/ad-api",
   "version": "0.0.1",
   "description": "packadge for connect to api ad",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CHSUVladimir/ad-api.git"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "test": "jest",
+    "test": "jest --silent=false",
     "prettier": "npx prettier --write src/* test/* example/*",
     "tslint": "tslint -p tslint -p tsconfig.json",
     "codestyle": "npm run prettier && npm run tslint",
     "docsify": "docsify serve ./docs",
-    "typedoc": "typedoc --out ./docs/api ./src  --readme docs/README.md",
+    "typedoc": "npx typedoc src/index.ts --exclude **/{node_modules,test,doc}/**/* . --out docs/api/api",
     "docs": "npm run typedoc && npm run docsify"
   },
   "husky": {
@@ -34,5 +38,21 @@
     "tslint-config-prettier": "^1.18.0",
     "typedoc": "^0.23.18",
     "typescript": "^4.8.4"
-  }
+  },
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "node-fetch": "^3.2.10",
+    "node-http": "^0.0.5"
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "node-scripts",
+    "**/src/*.spec.ts",
+    "**/src/*.stories.ts",
+    "**/src/*.test.ts",
+    "**/src/*_test.ts"
+  ]
 }
