@@ -1,6 +1,6 @@
 {
   "name": "@CHSUVladimir/ad-api",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "packadge for connect to api ad",
   "main": "index.js",
   "repository": {
